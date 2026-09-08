@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnav Parimoo — Systems Built</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F6F2;
+    --ink: #1E2126;
+    --ink-soft: #4A4F58;
+    --meta: #7A7E86;
+    --rule: #DAD6CC;
+    --amber: #9A6B23;
+    --amber-bg: #F0E6D2;
+    --green: #4B6B4F;
+    --green-bg: #E4EBE2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 120px; }
+  h1, h2, h3 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  h1 { font-size: 2.5rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.7rem; margin: 0 0 4px; }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 10px; }
+  p { margin: 0 0 16px; max-width: 66ch; color: var(--ink-soft); }
+  strong { color: var(--ink); font-weight: 600; }
+  code { font-family: 'IBM Plex Mono', monospace; font-size: 0.88em; background: #EFECE4; padding: 1px 5px; border-radius: 3px; color: var(--ink); }
+
+  header.intro { margin-bottom: 64px; }
+  .role-line { font-size: 1.15rem; color: var(--ink-soft); margin-bottom: 20px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.92rem; color: var(--meta); font-family: 'IBM Plex Mono', monospace; }
+  .contact a { color: var(--meta); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .contact a:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+  section.project { margin-bottom: 88px; }
+  .project-header {
+    border-top: 1px solid var(--rule);
+    padding-top: 28px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .status-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    background: var(--green-bg);
+    color: var(--green);
+  }
+  .status-tag.building { background: var(--amber-bg); color: var(--amber); }
+  .meta-row { font-size: 0.88rem; color: var(--meta); margin: -8px 0 24px; }
+
+  ul.solved { margin: 0 0 20px; padding: 0; list-style: none; }
+  ul.solved li {
+    padding: 14px 0 14px 24px;
+    border-top: 1px solid var(--rule);
+    position: relative;
+    color: var(--ink-soft);
+  }
+  ul.solved li:last-child { border-bottom: 1px solid var(--rule); }
+  ul.solved li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 22px;
+    width: 6px; height: 6px;
+    background: var(--amber);
+    border-radius: 50%;
+  }
+  ul.solved li strong { display: block; color: var(--ink); margin-bottom: 3px; }
+
+  ul.principles { margin: 0 0 20px; padding-left: 20px; color: var(--ink-soft); }
+  ul.principles li { margin-bottom: 8px; }
+
+  .authorship {
+    background: #EFECE4;
+    border-left: 3px solid var(--amber);
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 0.95rem;
+  }
+  .authorship p { margin: 0; color: var(--ink-soft); max-width: none; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+    font-size: 0.88rem;
+    color: var(--meta);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="intro">
+    <h1>Arnav Parimoo</h1>
+    <div class="role-line">Product Manager — two production systems, built while owning the business problem end to end</div>
+    <p>Both projects below started as operational bottlenecks with no engineering team attached. I scoped them, specified them precisely enough for AI coding tools to implement, tested every output against real data, and carried them through the production failures that showed up after launch. Details are genericized to remove business-specific data.</p>
+    <div class="contact">
+      <a href="mailto:arnavparimoo94@gmail.com">arnavparimoo94@gmail.com</a>
+      <a href="https://linkedin.com/in/arnavparimoo" target="_blank" rel="noopener">linkedin.com/in/arnavparimoo</a>
+      <span>Delhi NCR, India</span>
+    </div>
+  </header>
+
+  <section class="project">
+    <div class="project-header">
+      <h2>Purchase Order Extraction Pipeline</h2>
+      <span class="status-tag building">In production — actively evolving</span>
+    </div>
+    <div class="meta-row">B2B distribution · document parsing, data reconciliation, master-record design</div>
+
+    <h3>The problem</h3>
+    <p>Customers send purchase orders as PDF email attachments — one hospital chain per format, and every hospital lays its PDF out differently. Some don't even use table lines to separate items. Before this project, there was no central record of incoming orders at all: just a stream of emails someone had to open and read by hand, with no quick way to answer "what came in today," "what's still pending," or "what's been delivered."</p>
+
+    <h3>How it works</h3>
+    <p>Two simple parts, working together. The first part just watches the inbox: when a new order email arrives, it checks the sender is someone we actually expect orders from, saves the PDF attachment as-is, and adds it to a to-do list. It doesn't try to read what's inside the PDF — its only job is not missing an email.</p>
+    <p>The second part works through that to-do list: it opens each PDF, figures out which hospital sent it, reads the order details using rules built specifically for that hospital's layout, double-checks the numbers make sense, and then adds a clean row to one master spreadsheet that has every order in it.</p>
+    <p>These two parts are kept separate on purpose. The tool that watches the inbox is very good at reliably not missing emails, but it has no way to actually read a PDF's contents. Rather than trying to force one tool to do both jobs badly, each part does the one thing it's good at.</p>
+
+    <h3>Problems I caught — things only someone who knew the business would notice</h3>
+    <ul class="solved">
+      <li><strong>The same product was being entered under different names.</strong> Different hospitals — and sometimes the same hospital — described the same item slightly differently on their PDFs. Without cleanup, the system would treat "IV Cannula 20G" and "Cannula, IV, 20 Gauge" as two different products, splitting one item's order history in two. This needed a human pass to go through and match variants to one real product, which then feeds back into the system so future orders match automatically.</li>
+      <li><strong>We were at risk of accepting orders we can't actually fulfil.</strong> A hospital sometimes sends a PO for a product line we don't actually supply to them — sent in error, or meant for a different supplier. Left unchecked, that order would sit in our system looking like a real, expected order. Built a check that flags any hospital-and-product combination we're not actually authorized to fulfil, instead of silently accepting it.</li>
+      <li><strong>The same hospital brand showing up as several different "hospitals" in the data.</strong> One hospital chain operates under a few different legal/billing names, and its site names on the PDFs weren't always real place names. Left alone, this would fragment one hospital's order history across several look-alike entries. Fixed by building one master list that maps every variant name to the one real hospital, using postal-code lookups to confirm the real location where needed.</li>
+      <li><strong>A duplicate-flagging screen that looked fine but didn't actually work.</strong> The first version let someone mark two products as "same" with a simple yes/no per row. Testing it against a real case broke it immediately — three items were the same product, one was different, and yes/no per row simply can't express that. Rebuilt so items are compared and grouped in pairs instead.</li>
+    </ul>
+
+    <h3>Problems the system hit while running — the more technical fixes</h3>
+    <ul class="solved">
+      <li><strong>One sender's emails kept "disappearing."</strong> An order from one specific hospital wasn't showing up when we searched for it — at first it looked like it simply hadn't arrived. It had arrived; the email search tool itself had a blind spot for that sender that no search phrasing could work around. This is the exact discovery that led to building the separate inbox-watcher described above, instead of relying on a general search feature to find new orders.</li>
+      <li><strong>The tool we planned to use for reading PDFs wasn't available.</strong> The library originally picked for extracting text from PDFs couldn't even be installed in the environment the code runs in. Rebuilt the reading logic on a different tool, and had to work around that tool's own quirk of scrambling multi-column layouts by default.</li>
+      <li><strong>Dates were silently getting corrupted.</strong> The spreadsheet software automatically converts anything that looks like a date into its own internal number format, which corrupted every date already stored — once, and then it crept back in four more times in different parts of the code because the fix was easy to forget. Now there's a standing rule: any code that writes a date must use the fix, no exceptions.</li>
+    </ul>
+
+    <h3>Rules the system always follows</h3>
+    <ul class="principles">
+      <li><strong>If anything in a batch looks wrong, nothing in that batch gets saved</strong> — better to fix and re-run than to save half-correct data.</li>
+      <li><strong>If the system isn't sure about something, it asks a person instead of guessing</strong> — an unclear match gets flagged for review, never silently resolved on its own.</li>
+      <li><strong>Nothing gets permanently deleted automatically</strong> — old or rejected data gets moved aside, never erased, even when it would be easier to just delete it.</li>
+    </ul>
+
+    <h3>What's planned next</h3>
+    <ul class="principles">
+      <li><strong>A way to enter orders that don't come by email.</strong> Not every order arrives as an email attachment — staff will get a simple screen to enter those directly, going into the exact same master record under the same checks, rather than a separate, less-reliable path.</li>
+      <li><strong>Tracking what was actually delivered, not just what was ordered.</strong> Adding how much of each order was actually supplied, pulled from the business's existing accounting records. Still deciding whether that's a daily file import or a direct connection — depends on what the accounting software actually supports.</li>
+      <li><strong>A simple reporting view.</strong> Once the order and delivery data is reliable, a straightforward daily/weekly/monthly summary — what came in, what's outstanding — instead of scrolling through the raw master table by hand.</li>
+      <li><strong>Asking questions in plain English.</strong> The longer-term goal: connect an AI assistant to this same data so a question like "what's pending for this hospital" gets answered directly, instead of someone looking it up manually. This was the plan from the start — the clean, structured record above is the foundation it needs to work.</li>
+    </ul>
+
+    <h3>Outcome</h3> of every order — several hundred so far and growing — across ten hospital chains and hundreds of products, where before there was none. It runs on its own, catches the mistakes above automatically going forward, and more issues like these keep surfacing week to week as it's used on real data — which is expected for a system still this new, and each one gets fixed the same way: caught, understood, then made structurally impossible to repeat.</p>
+  </section>
+
+  <section class="project">
+    <div class="project-header">
+      <h2>Automated Document Reconciliation for Compliance Claims</h2>
+      <span class="status-tag">Live in production — v8.7</span>
+    </div>
+    <div class="meta-row">B2B distribution · OCR verification, execution-constrained scheduling</div>
+
+    <h3>The problem</h3>
+    <p>A monthly compliance obligation to a manufacturer partner required 600+ individual claims, each needing a matched pair of source documents — a tax invoice and a corresponding shipping document — as evidence. Before automation, this was fully manual: downloading, cross-referencing, and organizing documents by hand, consuming roughly one full person-day per cycle with no other work possible that day, and leaving real room for a mismatched cancelled/re-billed order to slip through undetected.</p>
+
+    <h3>Architecture</h3>
+    <p>A two-stage pipeline built to minimize the most expensive operation — OCR — while still catching what filename matching alone would miss. <strong>Stage 1</strong> categorizes documents by filename convention alone: fast, free, no contents read. <strong>Stage 2</strong> takes only the filename-matched pairs and OCR-verifies them, reading the actual document identifier inside each file and cross-checking it against its counterpart — catching the case where two files share a matching filename but disagree internally, which happens when an order is cancelled and re-billed under a new number while the original shipping document is reused.</p>
+
+    <h3>Production problems solved</h3>
+    <ul class="solved">
+      <li><strong>Platform execution timeout.</strong> The environment enforced a hard 6-minute execution ceiling; a large batch risked being killed mid-run with no report sent. Fixed with a self-imposed 315-second internal cutoff, checked before starting each new item — a 45-second buffer that guarantees the run always finishes and reports cleanly.</li>
+      <li><strong>OCR quota exposure.</strong> A second, independent guardrail alongside the time cutoff: a hard cap on documents processed per run, regardless of remaining time — bounding OCR calls (the most quota-sensitive step) so a fast run can't silently exhaust API quota.</li>
+      <li><strong>Financial-year rollover causing false matches.</strong> Document numbers reset every fiscal year, so a number alone isn't a stable identifier — the same number can exist in two different years and refer to unrelated documents. Fixed by embedding fiscal year explicitly into the matching key, so a pair can never cross a fiscal-year boundary by accident.</li>
+      <li><strong>Alert fatigue from transient errors.</strong> Non-critical alerts are suppressed outside a defined local-time window and logged instead; genuinely critical, action-required errors always bypass this and fire immediately.</li>
+    </ul>
+
+    <h3>Outcome</h3>
+    <p>Running in production at v8.7, saving roughly one day of manual work per monthly cycle, processing invoice/shipping-document pairs in the low hundreds against a 600+/month claims volume.</p>
+  </section>
+
+  <div class="authorship">
+    <p><strong>A note on authorship, for both projects above:</strong> implementation code was generated using AI coding tools (Gemini and GitHub Copilot) from detailed functional specifications. My work was the architecture decisions, writing specifications precise enough for AI-generated code to have a real chance of being correct, testing every output against real data rather than trusting it, and diagnosing and correcting the production failures documented above as they surfaced. Neither case study describes hand-written code — both describe engineering judgment and system design.</p>
+  </div>
+
+  <footer>
+    Genericized reference implementations and full write-ups available on request.
+  </footer>
+
+</div>
+</body>
+</html>
